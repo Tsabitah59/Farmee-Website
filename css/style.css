@@ -18,6 +18,9 @@
   --text-color: #333335;
   --text-gray: #8B8B8F;
 
+  /* Radius */
+  --default-radius: 30px;
+
 }
 
 body {
@@ -31,6 +34,8 @@ body {
   width: 90%;
   top: 50px;
   left: 50%;
+  padding: 20px 60px !important;
+  border-radius: var(--default-radius);
 }
 
 header{
