@@ -1,36 +1,100 @@
 /* Preparation */
-*::selection{
-    background: var(--secondary-color);
-    color: var(--white);
-
+*::selection {
+  background: var(--secondary-color);
+  color: var(--white);
 }
 
-:root{
-    /* Colors */
-    --bg-color: #F1F4F9;
-    --primary-color: #1DA871;
-    --secondary-color: #85F657;
-    --accent-color: #E9FF97;
-    --text-color: #333335;
-    --text-gray: #8B8B8F;
-
-    --white: white;
-
-    /*  */
+:root {
+  --primary-color: #1da83c;
+  --primary-color: ;
+  --secondary-color: #85f657;
+  --accent-color: #e9ff97;
 }
 
-/* Navbar */
-nav{
-    position: fixed;
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
 }
 
-/* Hero */
-header{
-    background: url("../assets/image/hero-bg.png") lightgray 50% / cover no-repeat; 
-    min-height: 100vh;
-    color: var(--white);
+.navbar {
+  background-color: white !important;
+  /* color: var(--text-white) !important; */
+  height: 110px;
+  /* margin: 20px; */
+  border-radius: 16px;
+  padding: 0, 5rem;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-header .col-12{
-    margin-top: 100px;
+@media (max-width: 992px) {
+  .navbar-brand img {
+    width: 70px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 14px;
+  }
+}
+
+.navbar-brand {
+  transition: 0.3s all ease;
+}
+.login-button {
+  background-color: var(--primary-color) !important;
+  color: var(--text-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  color: var(--text-white) !important;
+  background-color: var(--text-gray) !important;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: var(--text-white) !important;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: var(--text-gray) !important;
+}
+
+@media (min-width: 991px) {
+  .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--text-white) !important;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
 }
