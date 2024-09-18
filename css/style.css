@@ -42,9 +42,9 @@ body {
   transition: 0.3s all ease;
 }
 .login-button {
-  background-color: var(--primary-color) !important;
-  color: var(--text-color);
-  font-size: 14px;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 16px;
   padding: 8px 20px;
   border-radius: 50px;
   text-decoration: none;
@@ -52,14 +52,15 @@ body {
 }
 
 .login-button:hover {
-  color: var(--text-white) !important;
-  background-color: var(--text-gray) !important;
+  color: var(--white);
+  background-color: var(--primary-color);
 }
 
 .navbar-toggler {
   border: none;
   font-size: 1.25rem;
 }
+
 .navbar-toggler:focus,
 .btn-close:focus {
   box-shadow: none;
@@ -84,7 +85,7 @@ header{
 }
 
 header .header-content{
-  margin-top: ;
+  margin-top: 200px;
 }
 
 .custom-shape-divider-bottom-1726642385 {
