@@ -32,6 +32,7 @@
 
   /* Duration */
   --normal-duration: all 0.3s ease;
+  --normal-duration-without-all: 0.3s ease;
 }
 
 h1 {
@@ -49,7 +50,8 @@ h2 {
   line-height: 48px; /* 114.286% */
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 20px !important;
   font-style: normal;
   font-weight: 600;
@@ -67,6 +69,20 @@ body {
 .section-full {
   min-height: 100vh;
   color: var(--bg-color);
+}
+
+.primary-button {
+  padding: 14px 30px;
+  background: var(--primary-color);
+  color: var(--white) !important;
+  text-decoration: none;
+  border-radius: var(--big-radius);
+  outline: 1px solid var(--primary-color);
+  transition: var(--normal-duration);
+}
+
+.primary-button:hover{
+  outline-offset: 3px;
 }
 
 /* General Animation */
@@ -175,20 +191,22 @@ header .header-content {
   overflow: hidden;
 }
 
-.button-large::after{
-  content: 'hhhh';
+.button-large::after {
+  content: url(../assets/svg/leaf-fill.svg);
   position: absolute;
-  opacity: 50%;
+  width: 60px;
+  bottom: -10px;
+  opacity: 30%;
   right: -150px;
   transition: var(--normal-duration);
 }
 
-.button-large:hover{
+.button-large:hover {
   outline-offset: 5px;
   outline-color: var(--secondary-color);
 }
 
-.button-large:hover::after{
+.button-large:hover::after {
   right: 0;
 }
 
@@ -227,7 +245,7 @@ main {
 }
 
 .text-berjalan .the-text {
-  /* animation: berjalan 5s infinite linear; */
+  animation: berjalan 10s infinite linear;
   gap: 30px;
 }
 
@@ -251,6 +269,44 @@ main {
 /* Why Choose Us */
 .wcu {
   box-shadow: var(--bg-shadow);
+}
+
+.wcu .wcu-content {
+  padding: 30px;
+  border-radius: 20px;
+  gap: 20px;
+  transition: var(--normal-duration);
+  position: relative;
+}
+
+.wcu .wcu-content .wcu-inner-content-1{
+background: var(--white);
+}
+
+.wcu .wcu-content .wcu-inner-content-1 img{
+  width: 84px;
+}
+
+.wcu .wcu-content h3 {
+  color: var(--primary-color);
+}
+
+.wcu .wcu-content .wcu-inner-content-2{
+  position: absolute;
+  word-wrap: break-word;
+  z-index: -1;
+  padding: 30px;
+  border-radius: 20px;
+  gap: 20px;
+  background: var(--white);
+  transition: transform var(--normal-duration-without-all);
+}
+.wcu .wcu-content:hover{
+  transform: translateY(-30px);
+}
+
+.wcu .wcu-content:hover .wcu-inner-content-2{
+  transform: translateY(100px);
 }
 
 /* Responsive */
