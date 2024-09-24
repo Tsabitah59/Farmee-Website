@@ -16,8 +16,8 @@
   --secondary-color: #85f657;
   --accent-color: #e9ff97;
   --text-color: #333335;
-  --text-gray: #8b8b8f;
   --white: white;
+  --gradient: linear-gradient(196deg, #1DA83C -18.2%, #85F657 117.26%);
 
   /* Radius */
   --default-radius: 30px;
@@ -26,6 +26,7 @@
   /* Shadow */
   --default-shadow: 0px 4px 19.1px 0px rgba(149, 163, 186, 0.2);
   --bg-shadow: 0px 5px 30px 28px var(--bg-color);
+  --hover-shadow: 0px 67px 30px -39px rgba(29, 168, 113, 0.30);
 
   /* Sizing */
   --default-font-size: 16px;
@@ -64,6 +65,7 @@ body {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+  background: var(--bg-color);
 }
 
 .section-full {
@@ -81,8 +83,35 @@ body {
   transition: var(--normal-duration);
 }
 
-.primary-button:hover{
+.primary-button:hover {
   outline-offset: 3px;
+}
+
+.green-text {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.green-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--secondary-color);
+  animation: line var(--normal-duration-without-all);
+  animation-timeline: view();
+  animation-range: entry 3 cover 40%;
+}
+
+@keyframes line {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 /* General Animation */
@@ -116,7 +145,11 @@ body {
 }
 
 .navbar-brand {
-  transition: 0.3s all ease;
+  color: var(--primary-color) !important;
+  font-size: 26px !important;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .login-button {
@@ -155,11 +188,17 @@ body {
   position: relative;
 }
 
-.nav-link:hover,
-.nav-link:active {
-  color: var(--text-gray) !important;
+.absolute-pls {
+  position: static;
 }
 
+.nav-link:hover,
+.nav-link:active {
+  color: var(--primary-color) !important;
+}
+
+
+/* ========================== INDEX ========================== */
 /* Header */
 header {
   background: url(../assets/image/hero-bg.png) lightgray 50% / cover no-repeat;
@@ -242,6 +281,7 @@ main {
 /* Text Berjalan */
 .text-berjalan {
   height: 80px;
+  box-shadow: 0px -20px 35.5px 0px var(--BG-Color, #F1F4F9) inset, -120px 0px 24.4px -56px #FFF inset, 120px 0px 24.4px -56px #FFF inset;
 }
 
 .text-berjalan .the-text {
@@ -268,7 +308,6 @@ main {
 
 /* Why Choose Us */
 .wcu {
-  box-shadow: var(--bg-shadow);
 }
 
 .wcu .wcu-content {
@@ -279,11 +318,11 @@ main {
   position: relative;
 }
 
-.wcu .wcu-content .wcu-inner-content-1{
-background: var(--white);
+.wcu .wcu-content .wcu-inner-content-1 {
+  background: var(--white);
 }
 
-.wcu .wcu-content .wcu-inner-content-1 img{
+.wcu .wcu-content .wcu-inner-content-1 img {
   width: 84px;
 }
 
@@ -291,7 +330,7 @@ background: var(--white);
   color: var(--primary-color);
 }
 
-.wcu .wcu-content .wcu-inner-content-2{
+.wcu .wcu-content .wcu-inner-content-2 {
   position: absolute;
   word-wrap: break-word;
   z-index: -1;
@@ -301,13 +340,69 @@ background: var(--white);
   background: var(--white);
   transition: transform var(--normal-duration-without-all);
 }
-.wcu .wcu-content:hover{
+.wcu .wcu-content:hover {
   transform: translateY(-30px);
 }
 
-.wcu .wcu-content:hover .wcu-inner-content-2{
+.wcu .wcu-content:hover .wcu-inner-content-2 {
   transform: translateY(100px);
 }
+
+/* Count */
+.isi-count{
+  background: var(--gradient);
+  border-radius: var(--default-radius);
+  box-shadow: var(--hover-shadow);
+}
+
+.isi-count h2::before{
+  content: '+ ';
+}
+
+
+.custom-shape-divider-top-1727148988 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1727148988 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 98px;
+}
+
+.custom-shape-divider-top-1727148988 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/* ========================== ABOUT US ========================== */
+.about{
+  padding-top: 200px !important;
+}
+
+.gallery .row{
+  /* height: 500px; */
+}
+
+.gallery img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--default-radius);
+  animation: berjalan 5s linear infinite;
+  box-shadow: var(--default-shadow);
+}
+
+.gallery:hover img{
+  animation: ;
+}
+
+
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -320,6 +415,11 @@ background: var(--white);
 }
 
 @media (min-width: 991px) {
+  .navbar-nav{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+  }
   .nav-link:before {
     content: "";
     position: absolute;
@@ -328,14 +428,39 @@ background: var(--white);
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: var(--white) !important;
+    background-color: var(--primary-color) !important;
     visibility: hidden;
     transition: 0.3s ease-in-out;
   }
 
   .nav-link:hover::before,
   .nav-link.active::before {
-    width: 100%;
+    width: 90%;
     visibility: visible;
+  }
+}
+
+@media (max-width: 991.5px) {
+  .absolute-pls {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    padding: 30px;
+    border-radius: var(--default-radius);
+    background: var(--white);
+    width: 50%;
+  }
+
+  .navbar-nav {
+    margin-bottom: 10px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .login-button {
+    width: 100%;
   }
 }

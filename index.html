@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Farmee</title>
+
+    <!-- Vanilla -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.3.3/dist/css/bootstrap.min.css" />
+
+    <!-- Scrollreveal -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet" />  
   </head>
-  <body>
+  <body class="overflow-x-hidden">
 
     <!-- Navbar --> 
       <nav class="navbar navbar-expand-lg bg-white position-fixed translate-middle">
         <div class="container-fluid align-items-center">
-          <a class="navbar-brand" href="#">Farmee</a>
+          <a class="navbar-brand" href="index.html">Farmee</a>
 
             <button
               class="navbar-toggler"
@@ -26,23 +33,19 @@
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="absolute-pls collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Beranda</a>
+                  <a class="nav-link" href="about-us.html">Profil</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Profil</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link">Berita</a>
+                  <a class="nav-link" href="berita.html">Berita</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">Webinar</a>
+                  <a class="nav-link" href="webinar.html">Webinar</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">Kontak</a>
+                  <a class="nav-link" href="kontak.html">Kontak</a>
                 </li>
               </ul>
               <button class="login-button" type="submit">
@@ -55,17 +58,17 @@
 
 
     <!-- Header -->
-    <header class="position-fixed">
-      <div class="container">
-        <div class="row">
-          <div class="header-content col-12 col-md-8 text-center mx-auto d-flex flex-column">
-            <h2 class="bounce">Nature’s Best to You</h2>
-            <h1 id="title-hero">Solusi kebutuhan pertanian Dalam satu langkah mudah.</h1>
-            <a href="" class="button-large h3 mx-auto mt-3">Jelajahi</a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <header class="position-fixed">  
+      <div class="container">  
+        <div class="row">  
+          <div class="header-content col-12 col-md-8 text-center mx-auto d-flex flex-column">  
+            <h2 id="hero-left-title" class="bounce">Nature’s Best to You</h2>  
+            <h1 id="hero-right">Solusi kebutuhan pertanian Dalam satu langkah mudah.</h1>  
+            <a href="#" id="hero-left-button" class="button-large h3 mx-auto mt-3">Jelajahi</a>  
+          </div>  
+        </div>  
+      </div>  
+    </header>  
 
     <!-- Mainnya -->
     <main  class="position-relative w-100">
@@ -95,7 +98,7 @@
       </section>
 
       <!-- Why Choose Us -->
-      <section class="wcu py-5 section-full">
+      <section class="wcu py-5 section-full overflow-hidden">
         <div class="container">
           <div class="row">
             <div class="wcu-content col-3 col-md-6 col-sm-12 bg-white align-middle d-flex flex-column">
@@ -113,7 +116,35 @@
       </section>
 
       <!-- Count -->
-      <section>
+      <section class="count py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <h2>Apa <span class="green-text">Kata</span> Mereka?</h2>
+              <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+            </div>
+          </div>
+
+          <!-- Isi Count -->
+          <div class="isi-count row bg-primary align-items-center p-3">
+            <div class="col-6 col-sm-3 mt-2 text-center">
+              <h2 class="num text-white" data-val="200">000</h2>
+              <p class="text-white">Lorem Ipsum</p>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-center">
+              <h2 class="num text-white" data-val="200">000</h2>
+              <p class="text-white">Lorem Ipsum</p>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-center">
+              <h2 class="num text-white" data-val="200">000</h2>
+              <p class="text-white">Lorem Ipsum</p>
+            </div>
+            <div class="col-6 col-sm-3 mt-2 text-center">
+              <h2 class="num text-white" data-val="200">000</h2>
+              <p class="text-white">Lorem Ipsum</p>
+            </div>
+          </div>
+        </div>
 
       </section>
 
@@ -129,7 +160,7 @@
              <!-- Content -->
              <div class="col-md-6 col-12">
                <h2>Pemberdayaan Digital untuk Petani</h2>
-               <p class=" mb-5">Kami bermitra dengan penyedia internet untuk memberikan akses terjangkau di daerah pedesaan, serta menyediakan pelatihan keterampilan digital bagi petani. Selain itu, kami memanfaatkan teknologi open source untuk mengurangi biaya pengembangan website.</p>
+               <p class="mb-5 text-secondary">Kami bermitra dengan penyedia internet untuk memberikan akses terjangkau di daerah pedesaan, serta menyediakan pelatihan keterampilan digital bagi petani. Selain itu, kami memanfaatkan teknologi open source untuk mengurangi biaya pengembangan website.</p>
                <a href="#" class="primary-button h3">Lebih Banyak</a>
              </div>
           </div>
@@ -144,21 +175,27 @@
 
       <!-- Testimoni -->
       <section class="section-full py-5">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>Apa <span>Kata</span> Mereka?</h2>
-            <p class="">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2>Apa <span class="green-text">Kata</span> Mereka?</h2>
+              <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Berita -->
-      <section class="">
-        <div class="conteiner">
+      <section class="section-full">
+        <div class="container mx-auto">
           <div class="row">
-            <div class="col-12 col-md-8">
-              <h2>Berita <span>Terkini</span></h2>
+            <div class="col-12 col-md-9" data-aos="fade-left">
+              <h2>Berita <span class="green-text">Terkini</span></h2>
               
+            </div>
+            
+            <div class="col-12 col-md-3 d-flex justify-content-end">
+              <a href="#" class="primary-button">Lihat Semua</a>
             </div>
           </div>
         </div>
@@ -168,6 +205,13 @@
 
         </div>
       </section>
+
+      <!-- Shape Divider Lagi -->
+      <div class="custom-shape-divider-top-1727148988">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+        </svg>
+    </div>
       
     </main>
 
@@ -176,7 +220,16 @@
 
     </footer>
 
+    <!-- Vanilla -->
     <script src="js/script.js"></script>
+
+    <!-- Bootstrap -->
     <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!--Scrollreveal  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>  
+    <script>  
+      AOS.init();  
+    </script>
   </body>
 </html>
