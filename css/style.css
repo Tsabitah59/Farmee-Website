@@ -381,8 +381,8 @@ main {
 }
 
 /* ========================== ABOUT US ========================== */
-.about{
-  padding-top: 200px !important;
+.padding-top-berapapun-px{
+  padding-top: 150px !important;
 }
 
 .gallery .row{
@@ -402,9 +402,18 @@ main {
   animation: ;
 }
 
+/* ========================== WEBINAR ========================== */
+.carousel{
+  overflow: hidden;
+  border-radius: var(--default-radius);
 
+}
+.carousel img{
+  height: 400px;
+  object-fit: cover;
+}
 
-/* Responsive */
+/* ========================== RESPONSIVE ========================== */
 @media (max-width: 992px) {
   .navbar-brand img {
     width: 70px;
