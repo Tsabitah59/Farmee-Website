@@ -357,7 +357,19 @@ main {
 /* .testi-card:hover::before {
   rotate: 20deg;
 } */
-
+/* FAQ */
+.accordion-button:not(.collapsed) {
+    background-color: #3e8e41 !important; /* Warna tombol saat terbuka */
+    color: white; /* Warna teks tombol terbuka */
+    outline: none !important; /* Menghilangkan outline pada saat focus */
+    box-shadow: none !important; /* Menghilangkan bayangan biru */
+    
+}
+.accordion-button {
+    border: 1px solid #4CAF50 !important; /* Warna border */
+    outline: none !important; /* Menghilangkan outline pada saat focus */
+    box-shadow: none !important; /* Menghilangkan bayangan biru */
+}
 /* Divider */
 .custom-shape-divider-top-1727148988 {
   width: 100%;
