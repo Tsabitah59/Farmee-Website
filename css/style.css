@@ -46,7 +46,7 @@ h1 {
 }
 
 button{
-  
+
 }
 
 h2 {
@@ -88,7 +88,7 @@ body {
 }
 
 .section-full {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: var(--bg-color);
 }
 
@@ -100,6 +100,7 @@ body {
   border-radius: var(--big-radius);
   outline: 1px solid var(--primary-color);
   transition: var(--normal-duration);
+  border: none;
 }
 
 .primary-button:hover {
@@ -316,9 +317,12 @@ main {
   box-shadow: var(--hover-shadow);
 }
 
+/* Fitur */
+.fitur
+
 /* Info */
 .wadah-img {
-  height: 660px;
+  height: 1000px !important;
   scale: 0.8;
 }
 
@@ -361,16 +365,23 @@ main {
 /* .testi-card:hover::before {
   rotate: 20deg;
 } */
+
 /* FAQ */
+.faq{}
+.accordian-item{
+  border: none !important;
+  background: none;
+}
 .accordion-button:not(.collapsed) {
-    background-color: #3e8e41 !important; /* Warna tombol saat terbuka */
-    color: white; /* Warna teks tombol terbuka */
+    background-color: var(--bg-color) !important; /* Warna tombol saat terbuka */
     outline: none !important; /* Menghilangkan outline pada saat focus */
     box-shadow: none !important; /* Menghilangkan bayangan biru */
     
 }
 .accordion-button {
-    border: 1px solid #4CAF50 !important; /* Warna border */
+    border-bottom: 1px solid var(--primary-color) !important; /* Warna border */
+    color: var(--text-color);
+    background: transparent !important;
     outline: none !important; /* Menghilangkan outline pada saat focus */
     box-shadow: none !important; /* Menghilangkan bayangan biru */
 }
