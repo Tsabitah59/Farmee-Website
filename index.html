@@ -7,12 +7,15 @@
 
     <!-- Vanilla -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animation.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.3.3/dist/css/bootstrap.min.css" />
 
     <!-- Scrollreveal -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet" />  
+
+    <!-- Remixicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
   </head>
   <body class="overflow-x-hidden">
 
@@ -48,9 +51,9 @@
                   <a class="nav-link" href="kontak.html">Kontak</a>
                 </li>
               </ul>
-              <button class="login-button" type="submit">
+              <a class="login-button" type="submit">
                 Login
-              </button>
+              </a>
             </form>
           </div>
         </div>
@@ -61,9 +64,9 @@
     <header class="position-fixed">  
       <div class="container">  
         <div class="row">  
-          <div class="header-content col-12 col-md-8 text-center mx-auto d-flex flex-column">  
-            <h2 id="hero-left-title" class="bounce">Nature’s Best to You</h2>  
-            <h1 id="hero-right">Solusi kebutuhan pertanian Dalam satu langkah mudah.</h1>  
+          <div id="hero-right" class="header-content col-12 col-md-8 text-center mx-auto d-flex flex-column">  
+            <h2 class="bounce" data-aos="fade-left">Nature’s Best to You</h2>  
+            <h1 data-aos="fade-bottom"> Solusi kebutuhan pertanian Dalam satu langkah mudah. </h1>  
             <a href="#" id="hero-left-button" class="button-large h3 mx-auto mt-3">Jelajahi</a>  
           </div>  
         </div>  
@@ -71,148 +74,226 @@
     </header>  
 
     <!-- Mainnya -->
-    <main  class="position-relative w-100">
+    <main  class="position-relative w-100 overflow-hidden">
 
       <!-- Shape SVG -->
-      <div class="custom-shape-divider-bottom-1726642385 position-absolute">
+      <div class="custom-shape-divider-bottom-1726642385">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
         </svg>
       </div>
 
-      <!-- Text Berjalan -->
-      <section class="text-berjalan bg-white d-flex align-items-center overflow-hidden">
-        <div class="the-text d-flex">
-          <h2>World</h2>
-          <div class="dots"></div>
-          <h2>Hello</h2>
-          <div class="dots"></div>
-          <h2>World</h2>
-          <div class="dots"></div>
-          <h2>Hello</h2>
-          <div class="dots"></div>
-          <h2>World</h2>
-          <div class="dots"></div>
-          <h2>Hello</h2>
-        </div>
-      </section>
-
-      <!-- Why Choose Us -->
-      <section class="wcu py-5 section-full overflow-hidden">
-        <div class="container">
-          <div class="row">
-            <div class="wcu-content col-3 col-md-6 col-sm-12 bg-white align-middle d-flex flex-column">
-              <div class="wcu-inner-content-1 d-flex flex-column justify-content-center gap-2">
-                <img src="assets/svg/Content/content-1.svg" alt="" class="mx-auto">
-                <h3 class="text-center">Kualitas Tinggi</h3>
+      <div class="section bg-bg">
+        <!-- Text Berjalan -->
+        <section class="text-berjalan bg-white d-flex align-items-center overflow-hidden">
+          <div class="the-text d-flex">
+            <h2>World</h2>
+            <div class="dots"></div>
+            <h2>Hello</h2>
+            <div class="dots"></div>
+            <h2>World</h2>
+            <div class="dots"></div>
+            <h2>Hello</h2>
+            <div class="dots"></div>
+            <h2>World</h2>
+            <div class="dots"></div>
+            <h2>Hello</h2>
+          </div>
+        </section>
+  
+        <!-- Why Choose Us -->
+        <section class="wcu py-5 section-full overflow-hidden bg-bg">
+          <div class="container">
+            <div class="row justify-content-between align-items-center  mb-5">
+              <div class="col-12 col-md-6" data-aos="fade-left">
+                <h4 class="bounce">KENAPA HARUS FARMEE?</h4>
+                <h2>memenuhi <span class="green-text">kebutuhan</span>  secara optimal</h2>
               </div>
 
-              <div class="wcu-inner-content-2 top-5 start-0">
-                <p  class="text-center bg-white">Setiap produk kami diproduksi dengan standar tertinggi, memberikan performa unggul yang konsisten.</p>
+              <div class="col-md-5 col-12" data-aos="fade-right">
+                <p class="text-secondary text-end">Kami menyediakan segala sesuatu  yang dibutuhkan dengan cara yang paling efisien dan efektif.</p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <!-- Content 1 -->
+              <div class="col-12 col-md-3 col-sm-5 align-middle d-flex flex-column">
+                <div class="wcu-content bg-white m-1">
+                  <div class="wcu-inner-content-1 d-flex flex-column justify-content-center gap-2">
+                    <img src="assets/svg/Content/content-1.svg" alt="" class="mx-auto">
+                    <h3 class="text-center">Kualitas Tinggi</h3>
+                  </div>
+    
+                  <div class="wcu-inner-content-2 top-5 start-0">
+                    <p  class="text-center bg-white">Setiap produk kami diproduksi dengan standar tertinggi, memberikan performa unggul yang konsisten.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content 2 -->
+              <div class="col-12 col-md-3 col-sm-5 align-middle d-flex flex-column">
+                <div class="wcu-content bg-white m-1">
+                  <div class="wcu-inner-content-1 d-flex flex-column justify-content-center gap-2">
+                    <img src="assets/svg/Content/content-2.svg" alt="" class="mx-auto">
+                    <h3 class="text-center">Cepat dan Aman</h3>
+                  </div>
+    
+                  <div class="wcu-inner-content-2 top-5 start-0">
+                    <p  class="text-center bg-white">Kecepatan layanan kami dan standar keamanan yang tinggi, memastikan kenyamanan dan kepercayaan Anda.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content 3 -->
+              <div class="col-12 col-md-3 col-sm-5 align-middle d-flex flex-column">
+                <div class="wcu-content bg-white m-1">
+                  <div class="wcu-inner-content-1 d-flex flex-column justify-content-center gap-2">
+                    <img src="assets/svg/Content/content-3.svg" alt="" class="mx-auto">
+                    <h3 class="text-center">Teknologi Terkini</h3>
+                  </div>
+    
+                  <div class="wcu-inner-content-2 top-5 start-0">
+                    <p  class="text-center bg-white">Produk kami memastikan hasil yang maksimal dan terpercaya di lapangan</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content 4 -->
+              <div class="col-12 col-md-3 col-sm-5 align-middle d-flex flex-column">
+                <div class="wcu-content bg-white m-1">
+                  <div class="wcu-inner-content-1 d-flex flex-column justify-content-center gap-2">
+                    <img src="assets/svg/Content/content-4.svg" alt="" class="mx-auto">
+                    <h3 class="text-center">Layanan Pelanggan</h3>
+                  </div>
+    
+                  <div class="wcu-inner-content-2 top-5 start-0">
+                    <p  class="text-center bg-white">Kami memberikan panduan dan solusi praktis untuk membantu Anda mencapai hasil terbaik.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Count -->
-      <section class="count py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center mb-5">
-              <h2>Apa <span class="green-text">Kata</span> Mereka?</h2>
-              <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+        </section>
+  
+        <!-- Count -->
+        <section class="count py-5 bg-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center mb-5" data-aos="zoom-in">
+                <h2><span class="green-text">Prestasi </span>Kami</h2>
+                <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+              </div>
+            </div>
+  
+            <!-- Isi Count -->
+            <div class="isi-count row bg-primary align-items-center p-3" data-aos="zoom-in">
+              <div class="col-6 col-sm-3 mt-2 text-center">
+                <div class="counter">
+                  <h2 class="num text-white" data-val="110">000</h2>
+                  <p class="text-white">Lahan Terdaftar</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3 mt-2 text-center">
+                <div class="counter">
+                  <h2 class="num text-white" data-val="250">000</h2>
+                  <p class="text-white">Program Terlaksana</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3 mt-2 text-center">
+                <div class="counter">
+                  <h2 class="num text-white" data-val="500">000</h2>
+                  <p class="text-white">Petani Terbantu</p>
+                </div>
+              </div>
+              <div class="col-6 col-sm-3 mt-2 text-center">
+                <div class="counter">
+                  <h2 class="num text-white" data-val="100">000</h2>
+                  <p class="text-white">Mitra Farmee</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <!-- Isi Count -->
-          <div class="isi-count row bg-primary align-items-center p-3">
-            <div class="col-6 col-sm-3 mt-2 text-center">
-              <h2 class="num text-white" data-val="200">000</h2>
-              <p class="text-white">Lorem Ipsum</p>
-            </div>
-            <div class="col-6 col-sm-3 mt-2 text-center">
-              <h2 class="num text-white" data-val="200">000</h2>
-              <p class="text-white">Lorem Ipsum</p>
-            </div>
-            <div class="col-6 col-sm-3 mt-2 text-center">
-              <h2 class="num text-white" data-val="200">000</h2>
-              <p class="text-white">Lorem Ipsum</p>
-            </div>
-            <div class="col-6 col-sm-3 mt-2 text-center">
-              <h2 class="num text-white" data-val="200">000</h2>
-              <p class="text-white">Lorem Ipsum</p>
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- Info -->
-      <section class="info py-5">
-        <div class="container">
-          <div class="row">
-            <!-- Image -->
-             <div class="col-md-6 col-12">
-
-             </div>
-
-             <!-- Content -->
-             <div class="col-md-6 col-12">
-               <h2>Pemberdayaan Digital untuk Petani</h2>
-               <p class="mb-5 text-secondary">Kami bermitra dengan penyedia internet untuk memberikan akses terjangkau di daerah pedesaan, serta menyediakan pelatihan keterampilan digital bagi petani. Selain itu, kami memanfaatkan teknologi open source untuk mengurangi biaya pengembangan website.</p>
-               <a href="#" class="primary-button h3">Lebih Banyak</a>
-             </div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- Fitur -->
-      <section>
-
-      </section>
-
-      <!-- Testimoni -->
-      <section class="section-full py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 text-center">
-              <h2>Apa <span class="green-text">Kata</span> Mereka?</h2>
-              <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+  
+        </section>
+  
+        <!-- Info -->
+        <section class="info py-5 bg-bg">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Image -->
+               <div class="col-md-6 col-12">
+                <div class="wadah-img" data-aos="fade-right">
+                  <div class="image-info position-relative">
+                    <img src="assets/svg/info-img-belakang.svg" alt="">
+                    <img src="assets/svg/info-img-depan.svg" alt="" class="img-absolute position-absolute">
+                  </div>
+                </div>
+               </div>
+  
+               <!-- Content -->
+               <div class="col-md-6 col-12" data-aos="fade-left">
+                 <h2>Pemberdayaan Digital untuk Petani</h2>
+                 <p class="mb-5 text-secondary">Kami bermitra dengan penyedia internet untuk memberikan akses terjangkau di daerah pedesaan, serta menyediakan pelatihan keterampilan digital bagi petani. Selain itu, kami memanfaatkan teknologi open source untuk mengurangi biaya pengembangan website.</p>
+                 <a href="#" class="primary-button h3">Lebih Banyak</a>
+               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Berita -->
-      <section class="section-full">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-9" data-aos="fade-left">
-              <h2>Berita <span class="green-text">Terkini</span></h2>
+  
+        </section>
+  
+        <!-- Fitur -->
+        <section>
+  
+        </section>
+  
+        <!-- Testimoni -->
+        <section class="section-full py-5 bg-bg">
+          <div class="container">
+            <div class="row mb-5">
+              <div class="col-12 text-center" data-aos="zoom-in">
+                <h2>Apa <span class="green-text">Kata</span> Mereka?</h2>
+                <p class="text-secondary">Berikut adalah testimoni dari mereka yang sudah merasakan manfaat dari Farmee.</p>
+              </div>
+            </div>
+  
+            <!-- Testimoni Card Row -->
+            <div class="row">
+              <div class="testi-card">
+                <img src="" alt="">
+                <h3>Andi Pratama</h3>
+                <p>Website ini sangat membantu saya sebagai petani pemula. Informasinya lengkap dan mudah dipahami</p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Berita -->
+        <section class="berita section-full bg-bg">
+          <div class="container">
+            <div class="row align-items-center"  data-aos="zoom-in">
+              <div class="col-12 col-md-9">
+                <h2>Berita <span class="green-text">Terkini</span></h2>
+                
+              </div>
               
-            </div>
-            
-            <div class="col-12 col-md-3 d-flex justify-content-end">
-              <a href="#" class="primary-button">Lihat Semua</a>
+              <div class="col-12 col-md-3 d-flex justify-content-end">
+                <a href="#" class="primary-button">Lihat Semua</a>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- Isi Berita -->
-        <div class="row">
-
-        </div>
-      </section>
+  
+          <!-- Isi Berita -->
+          <div class="row">
+  
+          </div>
+        </section>
+      </div>
 
       <!-- Shape Divider Lagi -->
       <div class="custom-shape-divider-top-1727148988">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
         </svg>
-    </div>
-      
+      </div>
     </main>
 
     <!-- Footer -->
@@ -227,9 +308,6 @@
     <script src="bootstrap-5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
      <!--Scrollreveal  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>  
-    <script>  
-      AOS.init();  
-    </script>
+
   </body>
 </html>
