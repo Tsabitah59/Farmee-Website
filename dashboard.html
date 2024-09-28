@@ -7,63 +7,101 @@
 
     <!-- Vanilla -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/animation.css" />
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap-5.3.3/dist/css/bootstrap.min.css" />
 
     <!-- Remixicon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css"
+    />
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" href="assets/svg/Logo.svg" type="image/x-icon">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/svg/Logo.svg" type="image/x-icon" />
   </head>
   <body class="bg-bg dashboard">
-    <nav class="navbar-side bg-white position-fixed top-0 d-flex flex-column">
-      <div class="mx-auto py-3">
+    <nav class="navbar-side bg-white position-fixed d-flex flex-lg-column flex-row">
+      <div class="navbar-side-content mx-auto py-3">
         <div class="logo">
-            <a class="navbar-brand logo-login" href="index.html">Farmee</a>
+          <a class="navbar-brand logo-login" href="index.html">Farmee</a>
         </div>
 
         <div class="navigation">
-            <div class="">
-                <a href="#">
-                  <i class="ri-home-fill"></i>
-                  <span>Beranda</span>
-                </a>
-            </div>
+          <div class="navigation-side-nav d-flex flex-lg-column flex-row gap-2">
+            <a href="#" class="nav-side-link">
+              <i class="ri-home-fill me-lg-2 me-0"></i>
+              <span class="nav-side-item">Beranda</span>
+            </a>
+            <a href="#" class="nav-side-link">
+              <i class="ri-home-fill me-lg-2 me-0"></i>
+              <span class="nav-side-item">Beranda</span>
+            </a> 
+            <a href="#" class="responsive-switch">
+              <i class="ri-dashboard-fill"></i>
+            </a>
+            <a href="#" class="nav-side-link">
+              <i class="ri-home-fill me-lg-2 me-0"></i>
+              <span class="nav-side-item">Beranda</span>
+            </a>
+            <a href="#" class="nav-side-link">
+              <i class="ri-home-fill me-lg-2 me-0"></i>
+              <span class="nav-side-item">Beranda</span>
+            </a>
+          </div>
         </div>
 
-        <div class="switch">
-
+        <div class="switch position-absolute">
+          <i class="ri-dashboard-fill"></i>
+          <span>Dashboard</span>
         </div>
       </div>
     </nav>
-    
+
     <main class="mt-0">
       <!-- Navbar -->
       <nav class="navbar bg-body-tertiary navbar-dashboard">
-        <div class="container-fluid justify-content-end">
-          <form class="d-flex me-5" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search " aria-label="Search">
+        <div class="container-fluid justify-content-lg-end justify-content-between">
+          <div class="responsive-part d-flex align-items-center gap-md-4 gap-2">
+            <img src="assets/svg/Logo.svg" alt="" class="nav-atas-responsive-logo">
+          </div>
+          <form class="d-flex me-5 mb-0" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search "
+              aria-label="Search"
+            />
           </form>
-          <div class="d-flex gap-5 align-items-center">
-            <div class="d-flex gap-4">
-              <a href="#"><i class="ri-add-circle-fill text-secondary"></i></a>
-              <a href="#"><i class="ri-notification-2-fill text-secondary"></i></a>
+          <div class="d-flex gap-md-5 gap-3 align-items-center">
+            <div class="d-flex gap-md-4 gap-2">
+              <a href="#"><i class="ri-add-circle-fill text-secondary"></i> <i class="ri-search-fill text-secondary"></i>
+              </a>
+              <a href="#"
+                ><i class="ri-notification-2-fill text-secondary"></i
+              ></a>
             </div>
 
-            
             <div class="profil-part d-flex">
               <li class="nav-item dropdown">
-                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img class="profil-picture" src="assets/image/hero-bg.png" alt="">
+                <a
+                  class="dropdown-toggle text-secondary"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    class="profil-picture"
+                    src="assets/image/hero-bg.png"
+                    alt=""
+                  />
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <ul class="dropdown-menu p-3">
+                  <li><a class="dropdown-item" href="#"><i class="ri-user-fill me-2 fs-6 text-secondary"></i>Profil Saya</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="ri-settings-4-fill me-2 fs-6 text-secondary"></i>Pengaturan</a></li>
+                  <li><a class="dropdown-item text-danger" href="index.html"><i class="ri-logout-box-r-fill me-2 fs-6 text-danger"></i>Keluar</a></li>
                 </ul>
               </li>
             </div>
