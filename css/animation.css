@@ -31,8 +31,8 @@
   height: 3px;
   background: var(--secondary-color);
   animation: line var(--normal-duration-without-all);
-  animation-timeline: view();
-  animation-range: entry 3 cover 40%;
+  /* animation-timeline: view();
+  animation-range: entry 3 cover 40%; */
 }
 
 @keyframes line {
@@ -49,6 +49,7 @@
 
 .slide-left-mine{
     animation: slide-left-mine var(--normal-duration-without-all);
+    animation-timeline: view();
 }
 
 @keyframes slide-left-mine {
@@ -57,17 +58,45 @@
     }
 
     to{
-        transform: translateX(10px0);
+        transform: translateX(10px);
     }
 }
 
 /* Berjalan */
 @keyframes berjalan {
   from {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
 
   to {
     transform: translateX(-100%);
+  }
+}
+
+/* Footer Rise */
+@keyframes footer-rise {
+  from{
+    transform: translateY(1000px);
+  }
+
+  to{
+    transform: translateY(0);
+  }
+}
+
+.rise{
+  animation: footer-rise 5s linear;
+  animation-timeline: view();
+}
+
+/* Moving */
+
+@keyframes moving {
+  0% {
+      left: -20%;
+  }
+
+  100% {
+      left: 100%;
   }
 }
