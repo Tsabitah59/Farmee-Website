@@ -345,14 +345,44 @@ main {
 }
 
 /* Fitur */
-.fitur
+.fitur{
+    background: var(--gradient);
+    padding-block: 200px;
+}
+
+.fitur-atas{
+    top: 50px;
+    left: 50px;
+}
+
+.fitur-bawah{
+    bottom: 50px;
+    right: 50px;
+}
+
+.fitur-atas, .fitur-bawah{
+    scale: .8;
+}
+.fitur .card-fitur{
+    padding: 18px 12px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    background: var(--white);
+    border-radius: var(--small-radius);
+}
+
+.card-fitur i{
+    font-size: 40px;
+    color: var(--primary-color);
+    box-shadow: var(--default-shadow);
+}
 
 /* Info */
 .info {
   height: 1000px !important;
 }
-.info-container {
-}
+
 .wadah-img {
   display: block;
   scale: 0.8;
