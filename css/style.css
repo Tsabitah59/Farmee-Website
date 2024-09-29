@@ -249,6 +249,7 @@ header .header-content {
 main {
   z-index: -1;
   margin-top: 86vh;
+  margin-bottom: 70vh;
 }
 
 /* Text Berjalan */
@@ -257,7 +258,7 @@ main {
   position: relative;
   gap: 30px;
   box-shadow: 0px -20px 35.5px 0px var(--BG-Color, #f1f4f9) inset,
-    -120px 0px 24.4px -56px #fff inset, 120px 0px 24.4px -56px #fff inset;
+    -120px 0px 24.4px -56px var(--white) inset, 120px 0px 24.4px -56px var(--white) inset;
 }
 
 .the-text,
@@ -463,15 +464,12 @@ footer {
   position: absolute;
   bottom: 0;
   background: linear-gradient(to right, #1da83c, #85f657);
-  color: white;
   padding: 50px 0 30px;
   border-top-left-radius: 125px;
   font-size: 13px;
   z-index: -2;
   line-height: 20px;
-}
-
-.container {
+  padding-top: 400px;
 }
 
 .row {
@@ -494,25 +492,23 @@ footer {
 
 .col h3 {
   width: fit-content;
-  margin-top: 40px;
   position: relative;
 }
 
 .email-id {
   width: fit-content;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--white);
   margin: 20px 0;
 }
 
-ul li {
-  list-style: none;
+.links-item {
   margin-bottom: 2%;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-ul li a {
+.links-item a {
   text-decoration: none;
-  color: #ffff;
+  color: var(--white);
 }
 
 .col p {
@@ -524,7 +520,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
   margin-bottom: 50px;
 }
 
@@ -536,7 +532,7 @@ form .far {
 form input {
   width: 100%;
   background: transparent;
-  color: #ffff;
+  color: var(--white);
   border: 0;
   outline: none;
 }
@@ -550,7 +546,7 @@ form button {
 
 form button .fas {
   font-size: 20px;
-  color: #ffff;
+  color: var(--white);
 }
 
 .social-icon .fab {
@@ -560,7 +556,7 @@ form button .fas {
   text-align: center;
   line-height: 40px;
   font-size: 25px;
-  color: #ffff;
+  color: var(--white);
   margin-right: 15px;
   cursor: pointer;
 }
@@ -568,7 +564,7 @@ form button .fas {
 hr {
   width: 90%;
   border: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
   margin: 20px auto;
 }
 
@@ -591,7 +587,7 @@ hr {
 .underline span {
   width: 15px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 3px;
   position: absolute;
   top: 0;
@@ -733,14 +729,21 @@ hr {
 .navbar-side .switch{
     position: absolute;
     bottom: 20px !important;
+    left: 10%;
+    text-align: center;
+    width: 80%;
     background: var(--primary-color);
-    color: var(--white) ;
+    padding: 10px 20px;
+    border-radius: var(--default-radius);
+
 }
 
 /* Navbar Atas */
 .dashboard .navbar-dashboard {
   inset: 0 !important;
+  position: fixed;
   width: 100%;
+  height: fit-content;
   background: var(--bg-color) !important;
   box-shadow: none;
   border-radius: 0 !important;
@@ -810,6 +813,28 @@ li {
   display: none;
 }
 
+/* Dashboard Content */
+.dashboard-container{
+    margin-top: 100px;
+}
+
+.dashboard .card{
+    border-radius: var(--small-radius) !important;
+}
+
+/* ========================== COMMUNITY ========================== */
+.image-post{
+    width: 100%;
+    border-radius: var(--small-radius);
+}
+
+.actionnya{
+    font-size: 18px;
+}
+
+.actionnya i{
+    font-size: 24px;
+}
 /* ========================== RESPONSIVE ========================== */
 @media (max-width: 992px) {
   .navbar-brand img {
@@ -926,6 +951,9 @@ li {
     text-align: center;
   }
 
+  .navbar-side .switch{
+    display: none;
+  }
   main {
     width: 100% !important;
   }
@@ -943,6 +971,10 @@ li {
   .nav-atas-responsive-logo {
     display: block;
     width: 40px;
+  }
+
+  .dashboard .container{
+    padding-bottom: 150px;
   }
 }
 
