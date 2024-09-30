@@ -1,13 +1,3 @@
-// Parallax
-let hero_right = document.getElementById("hero-right");
-let hero_left = document.getElementById("hero-left-title");
-
-window.addEventListener("scroll", function () {
-  let value = window.scrollY;
-  hero_left.style.transform = "translateX(" + value * -0.5 + "px)";
-  hero_right.style.transform = "translateX(" + value * -0.5 + "px)";
-});
-
 // Counter
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 400;
