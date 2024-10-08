@@ -705,10 +705,6 @@ hr {
   box-shadow: var(--default-shadow);
 }
 
-.gallery:hover img {
-  animation: ;
-}
-
 /* ========================== WEBINAR ========================== */
 .carousel {
   overflow: hidden;
