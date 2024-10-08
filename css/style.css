@@ -9,6 +9,10 @@
   color: var(--white);
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 :root {
   /* Colors */
   --bg-color: #f1f4f9;
@@ -292,9 +296,6 @@ main {
 }
 
 /* Why Choose Us */
-.wcu {
-}
-
 .wcu .wcu-content {
   padding: 30px;
   border-radius: 20px;
@@ -316,7 +317,6 @@ main {
 }
 
 .wcu .wcu-content .wcu-inner-content-2 {
-  position: absolute;
   word-wrap: break-word;
   z-index: -1;
   padding: 30px;
@@ -324,15 +324,7 @@ main {
   gap: 20px;
   background: var(--white);
   transition: transform var(--normal-duration-without-all);
-}
-
-.wcu .wcu-content:hover {
-  transform: translateY(-30px);
-  box-shadow: var(--hover-shadow);
-}
-
-.wcu .wcu-content:hover .wcu-inner-content-2 {
-  transform: translateY(100px);
+  transform: translateY(20px);
 }
 
 /* Count */
@@ -556,7 +548,7 @@ footer {
   font-size: 18px;
 }
 
-.footer form {
+footer form {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -565,12 +557,12 @@ footer {
   margin-bottom: 50px;
 }
 
-.footer form .far {
+footer form .far {
   font-size: 18px;
   margin-right: 10px;
 }
 
-.footer form input {
+footer form input {
   width: 100%;
   background: transparent;
   color: var(--white);
@@ -578,18 +570,18 @@ footer {
   outline: none;
 }
 
-.footer form::placeholder{
+footer form::placeholder{
   color: var(--white) !important;
 }
 
-.footer form button {
+footer form button {
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
 
-.footer form button i {
+footer form button i {
   font-size: 20px;
   color: var(--white);
 }
@@ -811,14 +803,8 @@ hr {
 .wrapper .ingatkan-aku {
   display: flex;
   justify-content: space-around;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
+  font-size: 14px;
 }
-
-/* .ingatkan-aku label input {
-  accent-color: #fff;
-  margin-right: 3px;
-} */
 
 .ingatkan-aku a {
   color: #00595B;
